@@ -8,10 +8,13 @@ const products = [
     id: 'signature-oversized-hoodie',
     name: 'Signature Oversized Hoodie',
     category: 'Hoodies',
+    collection: 'signature',
     price: 148,
     description:
-      'A weighty oversized silhouette cut for everyday layering with a relaxed drape, clean finish and premium brushed fleece comfort.',
-    sizes: ['S', 'M', 'L', 'XL'],
+      'A heavy-weight hooded staple with a generous drape, clean finish and an understated attitude built for daily layering.',
+    fit: 'Relaxed / oversized fit',
+    material: 'Heavyweight cotton fleece',
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
     colors: ['Black', 'Stone'],
     images: [
       'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80',
@@ -24,9 +27,12 @@ const products = [
     id: 'essential-heavyweight-tee',
     name: 'Essential Heavyweight T-Shirt',
     category: 'Tees',
+    collection: 'essentials',
     price: 92,
     description:
-      'A dense, structured cotton tee with an understated finish, designed to hold shape in motion while maintaining everyday ease.',
+      'Structured, dense and exceptionally wearable. Designed with a clean neckline and crisp drape for elevated everyday uniform.',
+    fit: 'Standard / relaxed',
+    material: 'Premium cotton jersey',
     sizes: ['S', 'M', 'L', 'XL'],
     colors: ['Off White', 'Charcoal'],
     images: [
@@ -40,9 +46,12 @@ const products = [
     id: 'stryde-relaxed-sweatpants',
     name: 'Strydë Relaxed Sweatpants',
     category: 'Bottoms',
+    collection: 'core-collection',
     price: 128,
     description:
-      'Relaxed volume through the leg with a streamlined waist, premium fleece weight and a clean, modern fit built for movement.',
+      'A silhouette that balances movement and structure with a softer volume through the leg and a refined waistband finish.',
+    fit: 'Relaxed fit',
+    material: 'Fleece cotton blend',
     sizes: ['S', 'M', 'L', 'XL'],
     colors: ['Black', 'Moss'],
     images: [
@@ -56,9 +65,12 @@ const products = [
     id: 'signature-zip-hoodie',
     name: 'Signature Zip Hoodie',
     category: 'Hoodies',
+    collection: 'signature',
     price: 164,
     description:
-      'A sharper, layered essential with a full zip profile, tonal hardware and a premium hand-feel for all-day wear.',
+      'Layered cleanly with a full zip closure, structured collar and smooth tonal detailing that sits naturally in rotation.',
+    fit: 'Slim / refined relaxed',
+    material: 'Premium brushed fleece',
     sizes: ['S', 'M', 'L', 'XL'],
     colors: ['Black', 'Warm Grey'],
     images: [
@@ -72,9 +84,12 @@ const products = [
     id: 'city-utility-overshirt',
     name: 'City Utility Overshirt',
     category: 'Outerwear',
+    collection: 'new-arrivals',
     price: 182,
     description:
-      'A structured layering piece with a subtle utility attitude, sharp construction and tonal detailing for an elevated off-duty silhouette.',
+      'A structured utility layer finished with a sharper shoulder line and subtle detailing designed for layering beyond wardrobe basics.',
+    fit: 'Structured relaxed',
+    material: 'Cotton twill blend',
     sizes: ['S', 'M', 'L', 'XL'],
     colors: ['Graphite', 'Stone'],
     images: [
@@ -88,9 +103,12 @@ const products = [
     id: 'edge-utility-cap',
     name: 'Edge Utility Cap',
     category: 'Accessories',
+    collection: 'essentials',
     price: 54,
     description:
-      'A structured cap balanced between premium utility and understated styling, built to finish the fit without ever overpowering it.',
+      'A softly structured cap with a subtle utility edge, designed to finish a look without overwhelming the silhouette.',
+    fit: 'One size fit',
+    material: 'Cotton canvas',
     sizes: ['One Size'],
     colors: ['Black', 'Stone'],
     images: [
@@ -102,25 +120,46 @@ const products = [
   },
 ];
 
-const collectionHighlights = [
-  {
-    title: 'NEW SEASON / 01',
-    text: 'Refined silhouettes, structured layers and everyday essentials.',
+const collectionMeta = {
+  essentials: {
+    title: 'Essentials',
+    subtitle: 'Quiet confidence',
+    description:
+      'The foundational layer. Clean silhouettes, measured structure and materials designed for everyday wear without excess.',
     image:
-      'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1400&q=80',
   },
-  {
-    title: 'CORE / 02',
-    text: 'A modern foundation built for movement, identity and intent.',
+  'core-collection': {
+    title: 'Core Collection',
+    subtitle: 'Built to move',
+    description:
+      'A seasonless edit of weighted essentials shaped for movement, ease and effortless styling.',
     image:
-      'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=1400&q=80',
   },
-  {
-    title: 'DROP / 03',
-    text: 'Limited-run pieces designed to sit quietly at the edge of culture.',
+  signature: {
+    title: 'Signature',
+    subtitle: 'Statement without noise',
+    description:
+      'Identity-led layers and refined silhouettes that carry the Strydë point of view with a quieter confidence.',
     image:
-      'https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=80',
   },
+  'new-arrivals': {
+    title: 'New Arrivals',
+    subtitle: 'Latest drop',
+    description:
+      'Fresh silhouettes and studied details arriving with a sharper edit of key seasonal pieces.',
+    image:
+      'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1400&q=80',
+  },
+};
+
+const navItems = [
+  { to: '/shop', label: 'Shop' },
+  { to: '/collections', label: 'Collections' },
+  { to: '/about', label: 'About' },
+  { to: '/contact', label: 'Contact' },
 ];
 
 function App() {
@@ -132,13 +171,11 @@ function App() {
       return [];
     }
   });
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     localStorage.setItem('stryde-bag', JSON.stringify(bag));
   }, [bag]);
-
-  const bagCount = bag.reduce((sum, item) => sum + item.quantity, 0);
-  const subtotal = bag.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   const addToBag = (product, selectedSize) => {
     setBag((currentBag) => {
@@ -175,9 +212,16 @@ function App() {
     );
   };
 
+  const bagCount = bag.reduce((sum, item) => sum + item.quantity, 0);
+  const subtotal = bag.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
   return (
     <BrowserRouter>
-      <SiteShell bagCount={bagCount}>
+      <SiteShell
+        bagCount={bagCount}
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+      >
         <Routes>
           <Route path="/" element={<HomePage products={products} />} />
           <Route
@@ -185,13 +229,36 @@ function App() {
             element={<ShopPage products={products} addToBag={addToBag} />}
           />
           <Route
+            path="/collections"
+            element={<CollectionsPage products={products} />}
+          />
+          <Route
+            path="/collections/:slug"
+            element={<CollectionDetailPage products={products} />}
+          />
+          <Route
             path="/product/:productId"
             element={<ProductPage products={products} addToBag={addToBag} />}
           />
           <Route
             path="/bag"
-            element={<BagPage bag={bag} subtotal={subtotal} updateQuantity={updateQuantity} removeFromBag={removeFromBag} />}
+            element={
+              <BagPage
+                bag={bag}
+                subtotal={subtotal}
+                updateQuantity={updateQuantity}
+                removeFromBag={removeFromBag}
+              />
+            }
           />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/shipping" element={<ShippingPage />} />
+          <Route path="/returns" element={<ReturnsPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/terms" element={<TermsPage />} />
+          <Route path="/faqs" element={<FaqPage />} />
+          <Route path="/size-guide" element={<SizeGuidePage />} />
           <Route path="*" element={<HomePage products={products} />} />
         </Routes>
       </SiteShell>
@@ -199,21 +266,17 @@ function App() {
   );
 }
 
-function SiteShell({ bagCount, children }) {
+function SiteShell({ bagCount, menuOpen, setMenuOpen, children }) {
   return (
     <div className="site-shell">
       <header className="topbar">
         <div className="container nav-wrap">
-          <nav className="nav-left" aria-label="Primary navigation">
-            <NavLink to="/shop" className="nav-link">
-              Shop
-            </NavLink>
-            <NavLink to="/shop" className="nav-link">
-              Collections
-            </NavLink>
-            <NavLink to="/" className="nav-link">
-              About
-            </NavLink>
+          <nav className="desktop-nav" aria-label="Main navigation">
+            {navItems.map((item) => (
+              <NavLink key={item.to} to={item.to} className="nav-link">
+                {item.label}
+              </NavLink>
+            ))}
           </nav>
 
           <Link to="/" className="wordmark" aria-label="STRYDË home">
@@ -221,15 +284,40 @@ function SiteShell({ bagCount, children }) {
           </Link>
 
           <div className="nav-right">
-            <button type="button" className="minimal-button">
-              Search
-            </button>
+            <Link to="/shop" className="nav-link hidden-mobile">
+              Shop
+            </Link>
             <Link to="/bag" className="bag-link" aria-label="Shopping bag">
               <span>Bag</span>
               <span className="bag-count">{bagCount}</span>
             </Link>
+            <button
+              type="button"
+              className="menu-toggle"
+              aria-expanded={menuOpen}
+              aria-label="Toggle menu"
+              onClick={() => setMenuOpen((open) => !open)}
+            >
+              <span />
+              <span />
+            </button>
           </div>
         </div>
+
+        {menuOpen ? (
+          <div className="mobile-menu">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                className="mobile-link"
+                onClick={() => setMenuOpen(false)}
+              >
+                {item.label}
+              </NavLink>
+            ))}
+          </div>
+        ) : null}
       </header>
 
       <main>{children}</main>
@@ -238,30 +326,42 @@ function SiteShell({ bagCount, children }) {
         <div className="container footer-grid">
           <div>
             <div className="wordmark footer-wordmark">STRYDË</div>
-            <p className="muted">Premium streetwear built for movement and perspective.</p>
+            <p className="muted footer-intro">
+              Premium streetwear shaped through rhythm, restraint and utility.
+            </p>
           </div>
+
           <div>
             <h3>Explore</h3>
             <ul>
               <li><Link to="/shop">Shop</Link></li>
-              <li><Link to="/">Collections</Link></li>
-              <li><Link to="/bag">Bag</Link></li>
+              <li><Link to="/collections">Collections</Link></li>
+              <li><Link to="/about">About</Link></li>
             </ul>
           </div>
+
           <div>
             <h3>Support</h3>
             <ul>
-              <li><a href="mailto:hello@stryde.studio">hello@stryde.studio</a></li>
-              <li><a href="tel:+441234567890">+44 (0)20 0000 0000</a></li>
-              <li><a href="#">Instagram</a></li>
+              <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/shipping">Shipping</Link></li>
+              <li><Link to="/returns">Returns</Link></li>
             </ul>
           </div>
+
           <div>
             <h3>Newsletter</h3>
-            <form className="newsletter-form">
-              <input type="email" placeholder="Email address" aria-label="Email address" />
-              <button type="submit">Join</button>
-            </form>
+            <NewsletterForm />
+          </div>
+        </div>
+
+        <div className="container footer-bottom">
+          <span>© 2024 STRYDË</span>
+          <div className="legal-links">
+            <Link to="/privacy">Privacy</Link>
+            <Link to="/terms">Terms</Link>
+            <Link to="/faqs">FAQs</Link>
+            <Link to="/size-guide">Size guide</Link>
           </div>
         </div>
       </footer>
@@ -279,21 +379,35 @@ function HomePage({ products }) {
         <div className="container hero-content">
           <p className="eyebrow">EST. 2024 / MODERN STREETWEAR</p>
           <h1>NOT MADE TO FOLLOW.</h1>
+          <p className="hero-subtext">
+            Defined by utility, intention and sharp silhouettes for movement beyond the moment.
+          </p>
           <div className="hero-actions">
             <Link to="/shop" className="primary-button">
               Shop now
+            </Link>
+            <Link to="/collections" className="secondary-button">
+              View collections
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="collection-strip container">
-        <div className="section-heading">
-          <p className="eyebrow">Featured collection</p>
-          <h2>Built for a sharper silhouette.</h2>
+      <section className="container section-block luxury-panel">
+        <div className="section-heading row-space">
+          <div>
+            <p className="eyebrow">Featured collection</p>
+            <h2>Refined essentials for an intentional wardrobe.</h2>
+          </div>
+          <Link to="/collections" className="text-link">Browse all</Link>
         </div>
+
         <div className="editorial-grid">
-          {collectionHighlights.map((collection) => (
+          {[
+            { title: 'Essentials', text: 'Clean silhouettes built to work harder every day.', image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80' },
+            { title: 'Core Collection', text: 'Utility, rhythm and everyday ease in one consistent language.', image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80' },
+            { title: 'Signature', text: 'A stronger point of view expressed in measured detail.', image: 'https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=1200&q=80' },
+          ].map((collection) => (
             <article key={collection.title} className="editorial-card">
               <img src={collection.image} alt={collection.title} />
               <div className="editorial-copy">
@@ -305,8 +419,8 @@ function HomePage({ products }) {
         </div>
       </section>
 
-      <section className="arrivals container">
-        <div className="section-heading split-heading">
+      <section className="container section-block arrivals-block">
+        <div className="section-heading row-space">
           <div>
             <p className="eyebrow">New arrivals</p>
             <h2>New season essentials.</h2>
@@ -325,17 +439,21 @@ function HomePage({ products }) {
         <div className="container campaign-layout">
           <div className="campaign-image-wrap">
             <img
-              src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80"
-              alt="STRYDË campaign"
+              src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80"
+              alt="STRYDË campaign portrait"
             />
           </div>
           <div className="campaign-copy">
             <p className="eyebrow">Brand statement</p>
             <h2>Independent by design. Precise by instinct.</h2>
             <p>
-              Strydë moves with intention — blending statement silhouettes with minimal,
-              understated detail to create garments that feel confident without excess.
+              Strydë brings together understated luxury and urban rhythm through silhouettes that feel deliberate, effortless and unmistakably contemporary.
             </p>
+            <div className="campaign-meta">
+              <span>Limited run</span>
+              <span>Made to layer</span>
+              <span>Designed for movement</span>
+            </div>
           </div>
         </div>
       </section>
@@ -345,13 +463,37 @@ function HomePage({ products }) {
 
 function ShopPage({ products, addToBag }) {
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [sortBy, setSortBy] = useState('featured');
+  const [search, setSearch] = useState('');
 
   const categories = ['All', ...new Set(products.map((item) => item.category))];
 
   const visibleProducts = useMemo(() => {
-    if (selectedCategory === 'All') return products;
-    return products.filter((product) => product.category === selectedCategory);
-  }, [selectedCategory, products]);
+    let next = selectedCategory === 'All'
+      ? [...products]
+      : products.filter((product) => product.category === selectedCategory);
+
+    if (search.trim()) {
+      const query = search.trim().toLowerCase();
+      next = next.filter((product) =>
+        product.name.toLowerCase().includes(query) ||
+        product.category.toLowerCase().includes(query) ||
+        product.collection.toLowerCase().includes(query)
+      );
+    }
+
+    if (sortBy === 'low-high') {
+      next.sort((a, b) => a.price - b.price);
+    } else if (sortBy === 'high-low') {
+      next.sort((a, b) => b.price - a.price);
+    } else if (sortBy === 'name') {
+      next.sort((a, b) => a.name.localeCompare(b.name));
+    } else {
+      next.sort((a, b) => Number(b.featured) - Number(a.featured));
+    }
+
+    return next;
+  }, [products, search, selectedCategory, sortBy]);
 
   return (
     <div className="container page-shell shop-page">
@@ -359,6 +501,28 @@ function ShopPage({ products, addToBag }) {
         <div>
           <p className="eyebrow">Shop</p>
           <h1>Signature essentials.</h1>
+        </div>
+      </div>
+
+      <div className="toolbar">
+        <div className="search-box">
+          <input
+            type="search"
+            value={search}
+            onChange={(event) => setSearch(event.target.value)}
+            placeholder="Search products…"
+            aria-label="Search products"
+          />
+        </div>
+
+        <div className="sort-box">
+          <label htmlFor="sortBy">Sort by</label>
+          <select id="sortBy" value={sortBy} onChange={(event) => setSortBy(event.target.value)}>
+            <option value="featured">Featured</option>
+            <option value="low-high">Price: Low to high</option>
+            <option value="high-low">Price: High to low</option>
+            <option value="name">Name</option>
+          </select>
         </div>
       </div>
 
@@ -384,15 +548,75 @@ function ShopPage({ products, addToBag }) {
   );
 }
 
+function CollectionsPage({ products }) {
+  return (
+    <div className="container page-shell">
+      <div className="page-heading section-spaced">
+        <p className="eyebrow">Collections</p>
+        <h1>Curated seasonal edits.</h1>
+      </div>
+
+      <div className="collection-page-grid">
+        {Object.entries(collectionMeta).map(([slug, collection]) => (
+          <Link key={slug} to={`/collections/${slug}`} className="collection-tile">
+            <img src={collection.image} alt={collection.title} />
+            <div className="collection-tile-copy">
+              <span>{collection.subtitle}</span>
+              <h3>{collection.title}</h3>
+              <p>{collection.description}</p>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function CollectionDetailPage({ products }) {
+  const { slug } = useParams();
+  const collection = collectionMeta[slug];
+
+  if (!collection) {
+    return (
+      <div className="container page-shell">
+        <h1>Collection not found.</h1>
+      </div>
+    );
+  }
+
+  const collectionProducts = products.filter((product) => product.collection === slug);
+
+  return (
+    <div className="container page-shell collection-detail">
+      <div className="collection-hero">
+        <img src={collection.image} alt={collection.title} />
+        <div className="collection-hero-copy">
+          <p className="eyebrow">{collection.subtitle}</p>
+          <h1>{collection.title}</h1>
+          <p>{collection.description}</p>
+        </div>
+      </div>
+
+      <div className="product-grid collection-products">
+        {collectionProducts.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function ProductPage({ products, addToBag }) {
   const { productId } = useParams();
   const product = products.find((item) => item.id === productId);
   const [selectedImage, setSelectedImage] = useState(0);
-  const [selectedSize, setSelectedSize] = useState(product?.sizes[1] || 'M');
+  const [selectedSize, setSelectedSize] = useState(product?.sizes[0] || 'M');
 
   useEffect(() => {
-    if (product) setSelectedSize(product.sizes[1] || 'M');
-    setSelectedImage(0);
+    if (product) {
+      setSelectedSize(product.sizes[0] || 'M');
+      setSelectedImage(0);
+    }
   }, [product]);
 
   if (!product) {
@@ -405,6 +629,10 @@ function ProductPage({ products, addToBag }) {
       </div>
     );
   }
+
+  const relatedProducts = products
+    .filter((item) => item.id !== product.id && item.collection === product.collection)
+    .slice(0, 3);
 
   return (
     <div className="container page-shell product-page">
@@ -432,7 +660,7 @@ function ProductPage({ products, addToBag }) {
         <h1>{product.name}</h1>
         <div className="price-row">
           <span className="price">£{product.price}</span>
-          <span className="muted">Free worldwide shipping over £150</span>
+          <span className="muted">Free delivery on orders over £150</span>
         </div>
 
         <div className="size-selector">
@@ -466,13 +694,29 @@ function ProductPage({ products, addToBag }) {
           <h3>Product details</h3>
           <p>{product.description}</p>
           <ul>
-            <li>Premium cotton fleece composition</li>
-            <li>Relaxed oversized fit</li>
+            <li>{product.material}</li>
+            <li>{product.fit}</li>
             <li>Minimal tonal branding</li>
             <li>Designed for layering and daily wear</li>
           </ul>
         </div>
       </div>
+
+      {relatedProducts.length > 0 ? (
+        <div className="related-block">
+          <div className="section-heading row-space">
+            <div>
+              <p className="eyebrow">You may also like</p>
+              <h2>Complete the set.</h2>
+            </div>
+          </div>
+          <div className="product-grid related-grid">
+            {relatedProducts.map((relatedProduct) => (
+              <ProductCard key={relatedProduct.id} product={relatedProduct} />
+            ))}
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
@@ -515,6 +759,7 @@ function BagPage({ bag, subtotal, updateQuantity, removeFromBag }) {
                       Remove
                     </button>
                   </div>
+
                   <div className="bag-quantity-row">
                     <div className="quantity-control">
                       <button type="button" onClick={() => updateQuantity(item.id, item.size, -1)}>
@@ -550,12 +795,152 @@ function BagPage({ bag, subtotal, updateQuantity, removeFromBag }) {
               Proceed to checkout
             </button>
             <p className="muted checkout-note">
-              This is a front-end storefront demo. Real payment and order processing must be integrated before going live.
+              This storefront demo is front-end only. Real payment and order handling must be integrated before launch.
             </p>
           </aside>
         </div>
       )}
     </div>
+  );
+}
+
+function AboutPage() {
+  return (
+    <div className="container page-shell static-page">
+      <p className="eyebrow">About</p>
+      <h1>Quietly confident. Always deliberate.</h1>
+      <p>
+        STRYDË is a premium streetwear label shaped by contrast: minimal but expressive, structured but wearable, urban but refined. The brand is rooted in considered dressing and a culture of intentional movement.
+      </p>
+      <p>
+        Each collection is built around a strong point of view — utility, rhythm, and calm confidence — rather than trend-driven excess. The result is a wardrobe designed to move with the wearer and hold visual clarity over time.
+      </p>
+    </div>
+  );
+}
+
+function ContactPage() {
+  return (
+    <div className="container page-shell static-page">
+      <p className="eyebrow">Contact</p>
+      <h1>Get in touch.</h1>
+      <ul className="info-list">
+        <li>Email: hello@stryde.studio</li>
+        <li>Instagram: @stryde</li>
+        <li>Hours: Mon–Fri / 10:00–18:00</li>
+      </ul>
+    </div>
+  );
+}
+
+function ShippingPage() {
+  return (
+    <div className="container page-shell static-page">
+      <p className="eyebrow">Shipping</p>
+      <h1>Shipping information.</h1>
+      <p>Shipping options and timing will be confirmed during checkout. This storefront content should be updated with final carrier and delivery policy details before launch.</p>
+    </div>
+  );
+}
+
+function ReturnsPage() {
+  return (
+    <div className="container page-shell static-page">
+      <p className="eyebrow">Returns</p>
+      <h1>Returns & exchanges.</h1>
+      <p>Return windows and conditions should be defined by the final commercial operations policy before making the site live for commercial orders.</p>
+    </div>
+  );
+}
+
+function PrivacyPage() {
+  return (
+    <div className="container page-shell static-page">
+      <p className="eyebrow">Privacy</p>
+      <h1>Privacy policy.</h1>
+      <p>This page contains placeholder policy language. Before launch, replace with your final privacy notice and consent information, including data retention, cookies, and third-party processors.</p>
+    </div>
+  );
+}
+
+function TermsPage() {
+  return (
+    <div className="container page-shell static-page">
+      <p className="eyebrow">Terms</p>
+      <h1>Terms & conditions.</h1>
+      <p>Legal terms should be reviewed by a qualified advisor before accepting any real orders. This content is a placeholder for the final storefront.</p>
+    </div>
+  );
+}
+
+function FaqPage() {
+  return (
+    <div className="container page-shell static-page">
+      <p className="eyebrow">FAQs</p>
+      <h1>Frequently asked questions.</h1>
+      <div className="faq-list">
+        <div>
+          <h3>Do you offer international shipping?</h3>
+          <p>International shipping is indicated as available in principle, but final carrier setup and charges should be confirmed before live production.</p>
+        </div>
+        <div>
+          <h3>How do I choose my size?</h3>
+          <p>Refer to the size guide for a more accurate fit reference based on measurements and garment silhouette.</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function SizeGuidePage() {
+  return (
+    <div className="container page-shell static-page">
+      <p className="eyebrow">Size guide</p>
+      <h1>Fit notes.</h1>
+      <div className="size-guide-table">
+        <div><span>Size</span><span>Chest</span><span>Length</span></div>
+        <div><span>S</span><span>96cm</span><span>70cm</span></div>
+        <div><span>M</span><span>102cm</span><span>72cm</span></div>
+        <div><span>L</span><span>108cm</span><span>75cm</span></div>
+        <div><span>XL</span><span>116cm</span><span>78cm</span></div>
+      </div>
+    </div>
+  );
+}
+
+function NewsletterForm() {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState('idle');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const trimmed = email.trim();
+    const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed);
+
+    if (!isValid) {
+      setStatus('error');
+      setMessage('Please enter a valid email address.');
+      return;
+    }
+
+    setStatus('success');
+    setMessage('Subscribed successfully.');
+    setEmail('');
+  };
+
+  return (
+    <form className="newsletter-form" onSubmit={handleSubmit} noValidate>
+      <input
+        type="email"
+        value={email}
+        onChange={(event) => setEmail(event.target.value)}
+        placeholder="Email address"
+        aria-label="Email address"
+      />
+      <button type="submit">Join</button>
+      {message ? <p className={`form-status ${status}`}>{message}</p> : null}
+    </form>
   );
 }
 
@@ -573,7 +958,14 @@ function ProductCard({ product, smallAction }) {
         <div className="product-meta">
           <span>£{product.price}</span>
           {smallAction ? (
-            <button type="button" className="link-button" onClick={() => smallAction(product, product.sizes[1] || 'M')}>
+            <button
+              type="button"
+              className="link-button"
+              onClick={(event) => {
+                event.preventDefault();
+                smallAction(product, product.sizes[0] || 'M');
+              }}
+            >
               Add
             </button>
           ) : null}
