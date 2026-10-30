@@ -6,88 +6,96 @@ import './styles.css';
 const products = [
   {
     id: 'signature-oversized-hoodie',
-    name: 'Signature Oversized Hoodie',
+    name: 'STRYDË Heavyweight Hoodie',
     category: 'Hoodies',
     collection: 'signature',
     price: 148,
     description:
-      'A heavy-weight hooded staple with a generous drape, clean finish and an understated attitude built for daily layering.',
+      'An oversized hoodie built around structure, weight and a quiet confidence. Heavy fleece feel, dropped shoulders and a refined finish made to sit comfortably in rotation.',
     fit: 'Relaxed / oversized fit',
     material: 'Heavyweight cotton fleece',
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
-    colors: ['Black', 'Stone'],
+    colors: ['Black', 'Stone', 'Warm Cream'],
     images: [
       'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80',
       'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80',
       'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80',
     ],
     featured: true,
+    isConcept: true,
+    conceptLabel: 'Concept styling',
   },
   {
     id: 'essential-heavyweight-tee',
-    name: 'Essential Heavyweight T-Shirt',
+    name: 'STRYDË Essential Tee',
     category: 'Tees',
     collection: 'essentials',
     price: 92,
     description:
-      'Structured, dense and exceptionally wearable. Designed with a clean neckline and crisp drape for elevated everyday uniform.',
+      'An elevated everyday tee with substantial fabric presence and a deliberate shape. Clean neckline, dropped shoulders and sharp proportions designed for layering.',
     fit: 'Standard / relaxed',
     material: 'Premium cotton jersey',
     sizes: ['S', 'M', 'L', 'XL'],
-    colors: ['Off White', 'Charcoal'],
+    colors: ['Off White', 'Charcoal', 'Black'],
     images: [
       'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80',
       'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80',
       'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80',
     ],
     featured: true,
+    isConcept: true,
+    conceptLabel: 'Concept styling',
   },
   {
     id: 'stryde-relaxed-sweatpants',
-    name: 'Strydë Relaxed Sweatpants',
+    name: 'STRYDË Relaxed Sweatpant',
     category: 'Bottoms',
     collection: 'core-collection',
     price: 128,
     description:
-      'A silhouette that balances movement and structure with a softer volume through the leg and a refined waistband finish.',
+      'A premium sweatpant with a balanced leg line and softened structure. Functional details, measured volume and clean finish from waist to hem.',
     fit: 'Relaxed fit',
     material: 'Fleece cotton blend',
     sizes: ['S', 'M', 'L', 'XL'],
-    colors: ['Black', 'Moss'],
+    colors: ['Black', 'Stone', 'Charcoal'],
     images: [
       'https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=900&q=80',
       'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
       'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80',
     ],
     featured: true,
+    isConcept: true,
+    conceptLabel: 'Concept styling',
   },
   {
     id: 'signature-zip-hoodie',
-    name: 'Signature Zip Hoodie',
+    name: 'STRYDË Signature Zip',
     category: 'Hoodies',
     collection: 'signature',
     price: 164,
     description:
-      'Layered cleanly with a full zip closure, structured collar and smooth tonal detailing that sits naturally in rotation.',
+      'A zip hoodie with a sharper line and structured layering silhouette. Premium weight, clean collar and functional details kept understated.',
     fit: 'Slim / refined relaxed',
     material: 'Premium brushed fleece',
     sizes: ['S', 'M', 'L', 'XL'],
-    colors: ['Black', 'Warm Grey'],
+    colors: ['Black', 'Charcoal', 'Cream'],
     images: [
       'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80',
       'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80',
       'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80',
     ],
     featured: false,
+    isConcept: true,
+    conceptLabel: 'Concept styling',
   },
   {
     id: 'city-utility-overshirt',
-    name: 'City Utility Overshirt',
+    name: 'STRYDË Utility Overshirt',
     category: 'Outerwear',
     collection: 'new-arrivals',
     price: 182,
     description:
-      'A structured utility layer finished with a sharper shoulder line and subtle detailing designed for layering beyond wardrobe basics.',
+      'A structured outer layer with utility references and a sharper silhouette. Designed for layering without excess, finished with clean functional details.',
     fit: 'Structured relaxed',
     material: 'Cotton twill blend',
     sizes: ['S', 'M', 'L', 'XL'],
@@ -98,15 +106,17 @@ const products = [
       'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80',
     ],
     featured: false,
+    isConcept: true,
+    conceptLabel: 'Concept styling',
   },
   {
     id: 'edge-utility-cap',
-    name: 'Edge Utility Cap',
+    name: 'STRYDË Utility Cap',
     category: 'Accessories',
     collection: 'essentials',
     price: 54,
     description:
-      'A softly structured cap with a subtle utility edge, designed to finish a look without overwhelming the silhouette.',
+      'A structured cap aiming for subtle utility and a polished finish. Built to complete the look without visual overload.',
     fit: 'One size fit',
     material: 'Cotton canvas',
     sizes: ['One Size'],
@@ -117,6 +127,8 @@ const products = [
       'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
     ],
     featured: false,
+    isConcept: true,
+    conceptLabel: 'Concept styling',
   },
 ];
 
@@ -217,40 +229,14 @@ function App() {
 
   return (
     <BrowserRouter>
-      <SiteShell
-        bagCount={bagCount}
-        menuOpen={menuOpen}
-        setMenuOpen={setMenuOpen}
-      >
+      <SiteShell bagCount={bagCount} menuOpen={menuOpen} setMenuOpen={setMenuOpen}>
         <Routes>
           <Route path="/" element={<HomePage products={products} />} />
-          <Route
-            path="/shop"
-            element={<ShopPage products={products} addToBag={addToBag} />}
-          />
-          <Route
-            path="/collections"
-            element={<CollectionsPage products={products} />}
-          />
-          <Route
-            path="/collections/:slug"
-            element={<CollectionDetailPage products={products} />}
-          />
-          <Route
-            path="/product/:productId"
-            element={<ProductPage products={products} addToBag={addToBag} />}
-          />
-          <Route
-            path="/bag"
-            element={
-              <BagPage
-                bag={bag}
-                subtotal={subtotal}
-                updateQuantity={updateQuantity}
-                removeFromBag={removeFromBag}
-              />
-            }
-          />
+          <Route path="/shop" element={<ShopPage products={products} addToBag={addToBag} />} />
+          <Route path="/collections" element={<CollectionsPage products={products} />} />
+          <Route path="/collections/:slug" element={<CollectionDetailPage products={products} />} />
+          <Route path="/product/:productId" element={<ProductPage products={products} addToBag={addToBag} />} />
+          <Route path="/bag" element={<BagPage bag={bag} subtotal={subtotal} updateQuantity={updateQuantity} removeFromBag={removeFromBag} />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/shipping" element={<ShippingPage />} />
@@ -307,12 +293,7 @@ function SiteShell({ bagCount, menuOpen, setMenuOpen, children }) {
         {menuOpen ? (
           <div className="mobile-menu">
             {navItems.map((item) => (
-              <NavLink
-                key={item.to}
-                to={item.to}
-                className="mobile-link"
-                onClick={() => setMenuOpen(false)}
-              >
+              <NavLink key={item.to} to={item.to} className="mobile-link" onClick={() => setMenuOpen(false)}>
                 {item.label}
               </NavLink>
             ))}
@@ -326,9 +307,7 @@ function SiteShell({ bagCount, menuOpen, setMenuOpen, children }) {
         <div className="container footer-grid">
           <div>
             <div className="wordmark footer-wordmark">STRYDË</div>
-            <p className="muted footer-intro">
-              Premium streetwear shaped through rhythm, restraint and utility.
-            </p>
+            <p className="muted footer-intro">Premium streetwear shaped through rhythm, restraint and utility.</p>
           </div>
 
           <div>
@@ -383,12 +362,8 @@ function HomePage({ products }) {
             Defined by utility, intention and sharp silhouettes for movement beyond the moment.
           </p>
           <div className="hero-actions">
-            <Link to="/shop" className="primary-button">
-              Shop now
-            </Link>
-            <Link to="/collections" className="secondary-button">
-              View collections
-            </Link>
+            <Link to="/shop" className="primary-button">Shop now</Link>
+            <Link to="/collections" className="secondary-button">View collections</Link>
           </div>
         </div>
       </section>
@@ -438,10 +413,7 @@ function HomePage({ products }) {
       <section className="campaign-section">
         <div className="container campaign-layout">
           <div className="campaign-image-wrap">
-            <img
-              src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80"
-              alt="STRYDË campaign portrait"
-            />
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80" alt="STRYDË campaign portrait" />
           </div>
           <div className="campaign-copy">
             <p className="eyebrow">Brand statement</p>
@@ -469,28 +441,22 @@ function ShopPage({ products, addToBag }) {
   const categories = ['All', ...new Set(products.map((item) => item.category))];
 
   const visibleProducts = useMemo(() => {
-    let next = selectedCategory === 'All'
-      ? [...products]
-      : products.filter((product) => product.category === selectedCategory);
+    let next = selectedCategory === 'All' ? [...products] : products.filter((product) => product.category === selectedCategory);
 
     if (search.trim()) {
       const query = search.trim().toLowerCase();
-      next = next.filter((product) =>
-        product.name.toLowerCase().includes(query) ||
-        product.category.toLowerCase().includes(query) ||
-        product.collection.toLowerCase().includes(query)
+      next = next.filter(
+        (product) =>
+          product.name.toLowerCase().includes(query) ||
+          product.category.toLowerCase().includes(query) ||
+          product.collection.toLowerCase().includes(query)
       );
     }
 
-    if (sortBy === 'low-high') {
-      next.sort((a, b) => a.price - b.price);
-    } else if (sortBy === 'high-low') {
-      next.sort((a, b) => b.price - a.price);
-    } else if (sortBy === 'name') {
-      next.sort((a, b) => a.name.localeCompare(b.name));
-    } else {
-      next.sort((a, b) => Number(b.featured) - Number(a.featured));
-    }
+    if (sortBy === 'low-high') next.sort((a, b) => a.price - b.price);
+    else if (sortBy === 'high-low') next.sort((a, b) => b.price - a.price);
+    else if (sortBy === 'name') next.sort((a, b) => a.name.localeCompare(b.name));
+    else next.sort((a, b) => Number(b.featured) - Number(a.featured));
 
     return next;
   }, [products, search, selectedCategory, sortBy]);
@@ -506,13 +472,7 @@ function ShopPage({ products, addToBag }) {
 
       <div className="toolbar">
         <div className="search-box">
-          <input
-            type="search"
-            value={search}
-            onChange={(event) => setSearch(event.target.value)}
-            placeholder="Search products…"
-            aria-label="Search products"
-          />
+          <input type="search" value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Search products…" aria-label="Search products" />
         </div>
 
         <div className="sort-box">
@@ -548,7 +508,7 @@ function ShopPage({ products, addToBag }) {
   );
 }
 
-function CollectionsPage({ products }) {
+function CollectionsPage() {
   return (
     <div className="container page-shell">
       <div className="page-heading section-spaced">
@@ -623,16 +583,12 @@ function ProductPage({ products, addToBag }) {
     return (
       <div className="container page-shell">
         <h1>Product not found.</h1>
-        <Link to="/shop" className="primary-button inline-button">
-          Back to shop
-        </Link>
+        <Link to="/shop" className="primary-button inline-button">Back to shop</Link>
       </div>
     );
   }
 
-  const relatedProducts = products
-    .filter((item) => item.id !== product.id && item.collection === product.collection)
-    .slice(0, 3);
+  const relatedProducts = products.filter((item) => item.id !== product.id && item.collection === product.collection).slice(0, 3);
 
   return (
     <div className="container page-shell product-page">
@@ -650,13 +606,18 @@ function ProductPage({ products, addToBag }) {
             </button>
           ))}
         </div>
+
         <div className="main-image">
           <img src={product.images[selectedImage]} alt={product.name} />
         </div>
       </div>
 
       <div className="product-details">
-        <p className="eyebrow">{product.category}</p>
+        <div className="product-meta-top">
+          <p className="eyebrow">{product.category}</p>
+          {product.isConcept ? <span className="concept-badge">{product.conceptLabel}</span> : null}
+        </div>
+
         <h1>{product.name}</h1>
         <div className="price-row">
           <span className="price">£{product.price}</span>
@@ -682,11 +643,7 @@ function ProductPage({ products, addToBag }) {
           </div>
         </div>
 
-        <button
-          type="button"
-          className="primary-button product-button"
-          onClick={() => addToBag(product, selectedSize)}
-        >
+        <button type="button" className="primary-button product-button" onClick={() => addToBag(product, selectedSize)}>
           Add to bag
         </button>
 
@@ -735,9 +692,7 @@ function BagPage({ bag, subtotal, updateQuantity, removeFromBag }) {
         <div className="empty-bag">
           <h2>Your bag is empty.</h2>
           <p>Start with the latest drop and build your rotation.</p>
-          <Link to="/shop" className="primary-button inline-button">
-            Continue shopping
-          </Link>
+          <Link to="/shop" className="primary-button inline-button">Continue shopping</Link>
         </div>
       ) : (
         <div className="bag-layout">
@@ -751,24 +706,16 @@ function BagPage({ bag, subtotal, updateQuantity, removeFromBag }) {
                       <h3>{item.name}</h3>
                       <span>{item.size}</span>
                     </div>
-                    <button
-                      type="button"
-                      className="remove-link"
-                      onClick={() => removeFromBag(item.id, item.size)}
-                    >
+                    <button type="button" className="remove-link" onClick={() => removeFromBag(item.id, item.size)}>
                       Remove
                     </button>
                   </div>
 
                   <div className="bag-quantity-row">
                     <div className="quantity-control">
-                      <button type="button" onClick={() => updateQuantity(item.id, item.size, -1)}>
-                        −
-                      </button>
+                      <button type="button" onClick={() => updateQuantity(item.id, item.size, -1)}>−</button>
                       <span>{item.quantity}</span>
-                      <button type="button" onClick={() => updateQuantity(item.id, item.size, 1)}>
-                        +
-                      </button>
+                      <button type="button" onClick={() => updateQuantity(item.id, item.size, 1)}>+</button>
                     </div>
                     <strong>£{item.price * item.quantity}</strong>
                   </div>
@@ -791,9 +738,7 @@ function BagPage({ bag, subtotal, updateQuantity, removeFromBag }) {
               <span>Total</span>
               <strong>£{subtotal}</strong>
             </div>
-            <button type="button" className="primary-button checkout-button">
-              Proceed to checkout
-            </button>
+            <button type="button" className="primary-button checkout-button">Proceed to checkout</button>
             <p className="muted checkout-note">
               This storefront demo is front-end only. Real payment and order handling must be integrated before launch.
             </p>
@@ -931,13 +876,7 @@ function NewsletterForm() {
 
   return (
     <form className="newsletter-form" onSubmit={handleSubmit} noValidate>
-      <input
-        type="email"
-        value={email}
-        onChange={(event) => setEmail(event.target.value)}
-        placeholder="Email address"
-        aria-label="Email address"
-      />
+      <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="Email address" aria-label="Email address" />
       <button type="submit">Join</button>
       {message ? <p className={`form-status ${status}`}>{message}</p> : null}
     </form>
@@ -971,6 +910,7 @@ function ProductCard({ product, smallAction }) {
           ) : null}
         </div>
       </div>
+      {product.isConcept ? <span className="concept-pill">{product.conceptLabel}</span> : null}
     </article>
   );
 }
